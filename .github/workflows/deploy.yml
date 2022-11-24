@@ -23,6 +23,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: wine ./HTML5LaunchHelper.exe
-
-
+    - run: npm ci
+    - run: rm -rf ./dist
+    - run: npm run build
+    - run: sudo pm2 kill
+    - run: sudo pm2 start ./dist/main.js
