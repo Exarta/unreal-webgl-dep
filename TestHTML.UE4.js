@@ -936,7 +936,7 @@ function showWarningRibbon(warningText) {
 	if (existingWarningDialog) {
 		existingWarningDialog.innerHTML += '<br>' + warningText;
 	} else {
-		$('#buttonrow').prepend('<div class="alert alert-warning centered-axis-x" role="warning" id="warningDialog" style="padding-top:5px; padding-bottom: 5px">' + warningText + '</div></div>');
+		// $('#buttonrow').prepend('<div class="alert alert-warning centered-axis-x" role="warning" id="warningDialog" style="padding-top:5px; padding-bottom: 5px">' + warningText + '</div></div>');
 	}
 }
 
